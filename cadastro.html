@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <div class="back-button">
+      <a href="javascript:history.back()">
+        <img src="/imgs/seta.png" alt="Seta" />
+      </a>
+    </div>
+    <div class="container">
+      <h1>Crie uma conta</h1>
+      <form id="cadastroForm" action="submit_cadastro.html" method="post">
+        <div class="form-group">
+          <label for="nome">Digite o seu nome completo</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Digite seu e-mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="senha">Digite sua senha</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+        <div class="form-group">
+          <label for="confirmar-senha">Confirmar Senha</label>
+          <div class="input-with-icon">
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required />
+            <img id="togglePassword" src="./imgs/olhofechado.png" alt="Mostrar Senha" />
+          </div>
+          <small id="senhaErro" class="erro" style="display: none">As senhas não coincidem.</small>
+        </div>
+        <button type="submit">Cadastre-se</button>
+        <div class="form-group" id="ou">
+          <span>ou</span>
+        </div>
+        <div class="form-group">
+          <button type="button" class="google-button">
+            <img src="/imgs/google.png" alt="Google logo" /> Cadastre-se pelo Google
+          </button>
+          <div class="form-group" id="jatemconta">
+            <p>Já tem uma conta?</p>
+            <a href="login.html" class="link-entreagora">Entre agora</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="cadastro.js"></script>
+  </body>
+</html>
